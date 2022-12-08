@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- título da página -->
+    <title>Game Time</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <!-- título do texto web -->
+    <p><font size="5" face="Times">Trívia da Laboratória.</font></p>
+    <!-- um caixa para digitar o nome e dentro da caixa aparecer o texto Insira Seu Nome-->
+    <form action="nome" id="formulario-nome">
+      <input
+        type="text"
+        id="nome"
+        name="Enviar"
+        pattern="[A-Za-z]+"
+        placeholder="Insira seu nome"
+      />
+      <!-- botão Jogar com a chamada de função comecar para enviar a informação para JS-->
+      <button type="button" onclick="comecar()">Jogar</button>
+    </form>
+    <!-- nesse primeiro form foi colocado class junto do JS para esconder as perguntas e só mostrar após clicar no botão Jogar -->
+    <form
+      action="trívia"
+      class="esconder"
+      id="formulario-perguntas"
+      method="trívia"
+      autocomplete="on"
+    >
+      <!-- para aparecer o nome da página na web -->
+      <p id="saudacao"></p>
+      <!-- para aparecer as questões e elas serem validadas e retornarem com a resposta correta, precisei criar o form para cada questão e conseguir atrelar ela ao JS, dando um nome (inserido também no var, func e atrelando a Lab For) diferente para Name e ID-->
+      <fieldset>
+        <legend>1. Em qual ano a Laboratória foi criada?</legend>
+
+        <input
+          type="radio"
+          name="questao1"
+          id="questao1a"
+          value="2010"
+          onclick="selecionarOpcao('questao1','2010')"
+        />
+        <label for="questao1a">2010</label>
+
+        <input
+          type="radio"
+          name="questao1"
+          id="questao1b"
+          value="2012"
+          onclick="selecionarOpcao('questao1','2012')"
+        />
+        <label for="questao1b">2012</label>
+
+        <input
+          type="radio"
+          name="questao1"
+          id="questao1c"
+          value="2014"
+          onclick="selecionarOpcao('questao1','2014')"
+        />
+        <label for="questao1c">2014</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Quem a criou?</legend>
+
+        <input
+          type="radio"
+          name="questao2"
+          id="questao2a"
+          value="Rosa Flores Garcia"
+          onclick="selecionarOpcao('questao2','Rosa Flores Garcia')"
+        />
+        <label for="questao2a">Rosa Flores Garcia</label>
+
+        <input
+          type="radio"
+          name="questao2"
+          id="questao2b"
+          value="Maria Costa Checa"
+          onclick="selecionarOpcao('questao2','Maria Costa Checa')"
+        />
+        <label for="questao2b">Maria Costa Checa</label>
+
+        <input
+          type="radio"
+          name="questao2"
+          id="questao2c"
+          value="Julia Rodríguez Pérez"
+          onclick="selecionarOpcao('questao2','Julia Rodriguez Pérez')"
+        />Julia Rodríguez Pérez
+        <label for="questao2c">Julia Rodríguez Pérez</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Quantas organizações já contrataram gradudas?</legend>
+
+        <input
+          type="radio"
+          name="questao3"
+          id="questao3a"
+          value="830"
+          onclick="selecionarOpcao('questao3','830')"
+        />
+        <label for="questao3a">830</label>
+
+        <input
+          type="radio"
+          name="questao3"
+          id="questao3b"
+          value="987"
+          onclick="selecionarOpcao('questao3','987')"
+        />
+        <label for="questao3b">987</label>
+
+        <input
+          type="radio"
+          name="questao3"
+          id="questao3c"
+          value="1.100"
+          onclick="selecionarOpcao('questao3','1.100')"
+        />
+        <label for="questao3c">1.100</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>4. Em quantos países a Laboratória está presente?</legend>
+
+        <input
+          type="radio"
+          name="questao4"
+          id="questao4a"
+          value="4"
+          onclick="selecionarOpcao('questao4','4')"
+        />
+        <label for="questao4a">4</label>
+
+        <input
+          type="radio"
+          name="questao4"
+          id="questao4b"
+          value="6"
+          onclick="selecionarOpcao('questao4','6')"
+        />
+        <label for="questao4b">6</label>
+
+        <input
+          type="radio"
+          name="questao4"
+          id="questao4c"
+          value="9"
+          onclick="selecionarOpcao('questao4','9')"
+        />
+        <label for="questao4c">9</label>
+      </fieldset>
+      <!-- botão para ver as respostas trazendo o resultado e abaixo para jogar novamente, inserindo para chamar a func para o JS -->
+      <button type="button" onclick="resultado()">Ver respostas</button>
+      <button type="button" onclick="jogarnovamente()">Jogar Novamente</button>
+    </form>
+    <!-- inserindo o html com o JS e dando o caminho para conectalos  -->
+    <script type="text/javascript" src="src/index.js"></script>
+  </body>
+</html>
