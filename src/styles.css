@@ -1,0 +1,8 @@
+body {
+    font-family: sans-serif;
+  }
+  /* para esconder  as perguntas antes de apertar Jogar e inserir Nome*/
+  .esconder {
+    display: none;
+  }
+  
